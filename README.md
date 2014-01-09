@@ -1,7 +1,8 @@
 my-express1
 ===========
 
-Please install git, npm, nodejs in advance. Please refer to NodeJS page.
+
+Please install git, npm, nodejs(http://nodejs.org/) in advance. Please refer to NodeJS page.
 
 How to download:
 Under terminal, type 'git clone [git repository]', it will clone into your laptop automatically.<br>
@@ -16,4 +17,13 @@ Be sure you have installed npm.
 
 Mongodb
 -------------
+In order to run this program correctly, please make sure to install mongodb.
+For mac, pleae install home brew(http://brew.sh/) in advance, then follow the steps in MongoDB website:
+http://docs.mongodb.org/v2.2/tutorial/install-mongodb-on-os-x/
 
+
+
+Reference
+-------------
+Write a todo list using NodeJs/Express/MongoDB
+http://dreamerslab.com/blog/tw/write-a-todo-list-with-express-and-mongodb/
