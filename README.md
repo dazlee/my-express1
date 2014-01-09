@@ -18,12 +18,12 @@ Be sure you have installed npm.
 Mongodb
 -------------
 In order to run this program correctly, please make sure to install mongodb.
-For mac, pleae install home brew(http://brew.sh/) in advance, then follow the steps in MongoDB website:
+For mac, pleae install home brew(http://brew.sh/) in advance, then follow the steps in MongoDB website:\n
 http://docs.mongodb.org/v2.2/tutorial/install-mongodb-on-os-x/
 
 
 
 Reference
 -------------
-Write a todo list using NodeJs/Express/MongoDB
+Write a todo list using NodeJs/Express/MongoDB\n
 http://dreamerslab.com/blog/tw/write-a-todo-list-with-express-and-mongodb/
