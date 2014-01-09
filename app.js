@@ -4,6 +4,8 @@
  */
 
 //change your template engine and hostname here ('ejs' or 'dust')
+require('./db');
+
 var template_engine = 'dust'
 	, domain = 'localhost';
 
@@ -49,13 +51,14 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser('wigglybits'));
-	app.use(express.session({ secret: 'whatever', store: store }));
+  app.use(express.session({ secret: 'whatever', store: store }));
   app.use(express.session());
   app.use(app.router);
-  app.use(require('less-middleware')({ src: __dirname + '/public' }));
+  app.use(require('less-middleware')({ src: __dirname + '/public', force:true }));
   app.use(express.static(path.join(__dirname, 'public')));
 
 	//middleware
+	/*
 	app.use(function(req, res, next){
 		if ( req.session.user ) {
 			req.session.logged_in = true;
@@ -66,7 +69,7 @@ app.configure(function(){
 		res.locals.err = false; 
 		next();
 	});
-
+*/
 });
 
 app.configure('development', function(){
@@ -75,7 +78,15 @@ app.configure('development', function(){
 
 app.locals.inspect = require('util').inspect;
 app.get('/', routes.index);
+app.get('/destroy/:id', routes.destroy);
+app.get('/edit/:id', routes.edit);
+app.post('/create', routes.create);
+app.post('/update/:id', routes.update);
 
+app.listen(app.get('port'));
+console.log('Listen to port ' + app.get('port'));
+/*
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
+*/

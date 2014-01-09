@@ -3,5 +3,12 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 a {
-  color: #00B7FF;
+  color: #00B7FE;
+}
+span {
+  padding: 10px;
+}
+div.todo-list {
+  display: block;
+  padding: 10px;
 }

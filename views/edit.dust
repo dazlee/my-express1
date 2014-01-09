@@ -15,10 +15,12 @@
     </form>
 
     {#todos}
-      <div class="todo-list">
-        <span><a href="/edit/{_id}" title="update this todo item">{content}</a></span>
-        <span><a href="/destroy/{_id}" title="delete item with id">Delete</a>
-      </div>
+      <span>
+        <form action="/update/{_id}" method="post" accept-charset="utf-8">
+          <input type="text" name="content" value="{content}">
+        </form>
+      </span>
+      <span><a href="/destroy/{_id}" title="delete item with id">Delete</a>
     {/todos}
   </body>
 <!--
