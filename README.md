@@ -5,7 +5,7 @@ my-express1
 Please install git, npm, nodejs(http://nodejs.org/) in advance. Please refer to NodeJS page.
 
 How to download:
-Under terminal, type 'git clone [git repository]', it will clone into your laptop automatically.<br>
+Under terminal, type 'git clone http://github.com/[git repository]', it will clone into your laptop automatically.<br>
 
 How to install and run the program:
 Be sure you have installed npm.
